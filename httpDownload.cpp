@@ -48,7 +48,7 @@ void parse_url(const char *url, char *host, int *port, char *file_name,const cha
     {
         if (url[i] == '/')
         {
-            if (i !=  strlen(url) - 1)
+            if (i !=  int(strlen(url)) - 1)
                 j = 0;
             continue;
         }

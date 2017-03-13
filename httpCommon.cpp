@@ -45,7 +45,7 @@ struct HTTP_RES_HEADER parse_header(const char *response)
     /*获取响应头的信息*/
     struct HTTP_RES_HEADER resp;
 
-    char *pos = strstr(response, "HTTP/");
+   	const char *pos = strstr(response, "HTTP/");
     if (pos)//获取返回代码
         sscanf(pos, "%*s %d", &resp.status_code);
 
